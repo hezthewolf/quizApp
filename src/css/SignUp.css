@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(#273C75, #220A20) no-repeat;
+  height: 100%;
+}
+
+label{
+    color: #F5F6FA;
+    font-size: 18px;
+}
+
+
+.nav-sign{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #F5F6FA;
+  padding: 20px;
+  margin: 0 30px;
+}
+
+.logo-sign{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+
+.card-signup{
+    width: 80%;
+    height: 450px;
+    background: #192A56;
+    display: flex;
+    border-radius: 10px;
+}
+
+form, .separator, .google{
+    width: 33.333%;
+}
+
+
+
+.title-sign{
+    padding: 20px;
+    padding-top: 10px;
+    align-self: flex-start;
+    margin-left: 150px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #F5F6FA;
+}
+
+.name, .username, .email, .password-sign, .confirm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.name input, .username input, .email input, .password-sign input, .confirm input{
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: #220A20;
+}
+
+.name input::placeholder, .username input::placeholder, .email input::placeholder{
+    color: #F5F6FA;
+    opacity: 0.6;
+}
+
+input[type=text], input[type=password]{
+    color: #F5F6FA;
+    padding-left: 20px;
+}
+
+
+.separator{
+    align-self: center;
+}
+
+.separator img{
+    margin-left: 50%;
+}
+
+.separator div{
+    margin-left: 40%;
+    margin-top: 40px;
+}
+
+
+
+.submit input{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #F5F6FA;
+    background: #273C75;
+}
+
+.submit input:hover{
+    cursor: pointer;
+}
+
+.google{
+    align-self: center;
+}
+
+.google button{
+    margin-left: 50px;
+    width: 200px;
+    height: 45px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+}
+
+.google button span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.google button:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+.copyright{
+  color: #F5F6FA;
+  margin-top: 47px;
+  position: relative;
+  bottom: 0;
+}
+
+
+
+
+
+
+
+
+/*                                          MEDIA QUERIES                                           */
+
+
+/*                                      MEDIUM DEVICES                                               */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+
+    .card-signup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        height: 100%;
+    }
+
+    form, .separator, .google{
+        width: 100%;
+    }
+
+    .separator div{
+        margin-left: 20px;
+        text-align: center;
+    }
+
+
+    #separator{
+        display: none;
+    }
+
+
+
+    .google{
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .google button{
+        margin-left: 0;
+        justify-items: center;
+    }
+}
+
+
+/*                                        SMALL DEVICES                                      */
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    
+    .card-signup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        height: 100%;
+    }
+
+
+    form, .separator, .google{
+        width: 100%;
+    }
+
+    form, .separator{
+        margin-left: 30px;
+    }
+
+    .separator div{
+        margin-left: 20px;
+        text-align: center;
+    }
+
+
+    #separator{
+        display: none;
+    }
+
+
+
+    .google{
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .google button{
+        margin-left: 0;
+        justify-items: center;
+    }
+}
+
+
+
+/*                       EXTRA-SMALL DEVICES                             */
+@media only screen and (max-width: 599px){
+    .nav-sign{
+        margin: 0 10px;
+    }
+
+    .card-signup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        height: 100%;
+    }
+
+    .title-sign{
+        margin-left: 50px;
+    }
+
+    .name input, .username input, .email input, .password-sign input, .confirm input{
+        width: 200px;
+    }
+
+
+    form, .separator, .google{
+        width: 100%;
+    }
+
+    form, .separator{
+        margin-left: 20px;
+    }
+
+    .separator div{
+        text-align: center;
+        margin-left: 0;
+    }
+
+
+    #separator{
+        display: none;
+    }
+
+
+
+    .google{
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .google button{
+        margin-left: 0;
+        justify-items: center;
+    }
+}

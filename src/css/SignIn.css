@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(#273C75, #220A20) no-repeat;
+  height: 100%;
+}
+
+label{
+    color: #F5F6FA;
+    font-size: 18px;
+}
+
+.nav-signin{
+    display: flex;
+    flex-direction: row;
+    color: #F5F6FA;
+    padding: 20px;
+    margin: 0 30px;
+}
+
+
+.card-sign{
+    width: 80%;
+    height: 450px;
+    background: #192A56;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.info{
+    display: flex;
+}
+
+
+
+.info form, .info .separator-sign, .info .google-sign{
+    width: 33.333%;
+}
+
+
+
+.title{
+    padding: 20px;
+    padding-top: 10px;
+    align-self: flex-start;
+    margin-left: 150px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #F5F6FA;
+}
+
+.login-para{
+    padding-left: 20px;
+    color: #F5F6FA;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.username-sign, .password{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.username-sign input,  .password input{
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: #220A20;
+}
+
+.username-sign input::placeholder {
+    color: #F5F6FA;
+    opacity: 0.6;
+}
+
+input[type=text], input[type=password]{
+    color: #F5F6FA;
+    padding-left: 20px;
+}
+
+.remember{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.remember input{
+    margin-right: 5px;
+    color: #273C75;
+}
+
+
+
+
+.separator-sign{
+    align-self: center;
+}
+
+.separator-sign img{
+    margin-left: 50%;
+}
+
+.separator-sign div{
+    margin-left: 40%;
+    margin-top: 40px;
+}
+
+.next{
+    text-align: center;
+}
+
+.next input{
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #F5F6FA;
+    background: #273C75;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot{
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.forgot a{
+    color: #F5F6FA;
+}
+
+
+.next input:hover{
+    cursor: pointer;
+}
+
+.google-sign{
+    align-self: center;
+}
+
+.google-sign button span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #111111;
+}
+
+.google-sign button{
+    margin-left: 50px;
+    width: 200px;
+    height: 45px;
+}
+
+
+.google-sign button:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+.copyright-sign{
+  color: #F5F6FA;
+  margin-top: 47px;
+  position: relative;
+  bottom: 0;
+  margin-bottom: 50px;
+}
+
+
+
+
+/*                               MEDIA QUERIES                                  */
+
+/*                              MEDIUM DEVICES                                 */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .card-sign{
+        height: 100%;
+    }
+
+    .title{
+        margin-left: 80px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info form {
+        margin-left:100px;
+    }
+
+    .google-sign{
+        align-self: flex-start;
+        margin-left: 80px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+
+/*                                     SMALL DEVICES                         */
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    .card-sign{
+        height: 100%;
+    }
+
+    .title{
+        margin-left: 60px;
+    }
+
+    .login-para{
+        font-size: 16px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info form {
+        margin-left: 40px;
+    }
+
+    .remember{
+        width: 100%;
+    }
+
+    .next, .forgot{
+        margin-left: 20px;
+    }
+
+
+
+    .google-sign{
+        align-self: flex-start;
+        margin-left: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+/*                            EXTRA-SMALL DEVICES                             */
+@media only screen and (max-width: 599px){
+    .nav-signin{
+        margin: 5px 10px;
+    }
+
+    .card-sign{
+        height: 100%;
+    }
+
+    .title{
+        margin-left: 60px;
+    }
+
+    .login-para{
+        font-size: 16px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info form {
+        margin-left: 10px;
+    }
+
+    .remember{
+        width: 100%;
+    }
+
+    .remember label{
+        font-size: 15px;
+    }
+
+    .next, .forgot{
+        margin-left: 20px;
+        width: 100%;
+    }
+
+    .forgot{
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .username-sign input,  .password input{
+        width: 200px;
+    }
+
+
+
+    .google-sign{
+        align-self: flex-start;
+        margin-left: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .google-sign button{
+        width: 200px;
+    }
+}

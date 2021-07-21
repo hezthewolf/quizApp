@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../css/Start.css'
 import questions from '../images/questions.png'
 import questionsMedium from '../images/questionsMedium.png'
 import questionsTablet from '../images/questionsTablet.png'
@@ -14,7 +15,7 @@ class Start extends Component{
           </div>
 
           <div className="signIn">
-            <a href={"#"}>Sign in</a>
+            <a href={"./SignIn"}>Sign in</a>
           </div>
         </div>
         <main>
@@ -22,7 +23,7 @@ class Start extends Component{
             <div className="branding">
               <p>Welcome to Quivia, your trivia companion</p>
               <p>Sign up to save progress and feature in the leaderboards</p>
-              <a href={"./SignUp.js"}><button>Sign up</button></a>
+              <a href={"./SignUp"}><button>Sign up</button></a>
             </div>
 
 
@@ -36,7 +37,7 @@ class Start extends Component{
           </div>
 
 
-          <div className="copyright">
+          <div className="copyright-start">
             &copy; Quivia 2021
           </div>
         </main>
@@ -44,5 +45,6 @@ class Start extends Component{
     )
   }
 }
+
 
 export default Start;
