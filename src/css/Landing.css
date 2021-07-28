@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(#273C75, #220A20) no-repeat;
+  color: #F5F6FA;
+  height: 100vh;
+}
+
+main{
+    height: 100%;
+}
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.landing-navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 40px;
+    align-items: center;
+}
+
+.logo-landing{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.landing-links ul{
+    display: flex;
+}
+
+.landing-links ul li{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+LandingTiles{
+    width: 25%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.whole-tiles{
+    width: 25%;
+    height: 200px;
+    display: flex;
+}
+
+.individual-tiles{
+    width: 100vw;
+    display: flex;
+}
