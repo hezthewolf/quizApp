@@ -48,10 +48,17 @@ function Landing() {
                         <LandingTiles imaging={historyCategory} tileText="History" />
                     </div>
                 </div>
+
+                <div className="copyright-landing">
+                        &copy; Quivia 2021
+                </div>
+                
             </main>
+
         </div>
     )
 }
+
 
 
 export default Landing;

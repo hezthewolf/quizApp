@@ -37,6 +37,7 @@ ul{
 
 .landing-links ul{
     display: flex;
+    cursor: pointer;
 }
 
 .landing-links ul li{
@@ -44,20 +45,98 @@ ul{
     cursor: pointer;
 }
 
+.landing-search{
+    margin: 20px 0;
+    margin-top: 0;
+}
+
+#searchLanding{
+    height: 35px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    background: rgba(34, 10, 32, 0.45);
+    color: #F5F6FA;
+}
+
+#searchLanding:focus{
+    outline: none;
+}
+
+.search-btn{
+    height: 35px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background: rgba(34, 10, 32, 0.45);
+    color: #F5F6FA;
+    width: 30px;
+    cursor: pointer;
+}
+
+FontAwesomeIcon{
+    margin-right: 10px;
+}
+
+.landing-para{
+    width: 700px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.categories-title{
+    margin-bottom: 10px;
+    color: #E859FF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 LandingTiles{
-    width: 25%;
+    width: 50px;
     height: 150px;
     display: flex;
     flex-direction: row;
 }
 
 .whole-tiles{
-    width: 25%;
-    height: 200px;
+    width: 100%;
+    height: 250px;
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .individual-tiles{
-    width: 100vw;
+    width: 100%;
     display: flex;
+}
+
+.individual-tiles div {
+    margin-right: 40px;
+}
+
+.categories-tiles{
+    margin-top: 100px;
+}
+
+.category-image{
+    display: flex;
+}
+
+.category-image img{
+    width: 100%;
+    height: 200px;
+}
+
+.category-label{
+    margin-top: 10px;
+    color: #F5F6FA;
+    font-weight: bold;
+}
+
+.copyright-landing{
+    color: #F5F6FA;
+    position: relative;
+    bottom: 0;
+    margin-top: 10px;
 }
