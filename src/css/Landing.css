@@ -9,7 +9,7 @@
 body{
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(#273C75, #220A20) no-repeat;
-  color: #F5F6FA;
+  color: #4f5363;
   height: 100vh;
 }
 
@@ -20,6 +20,16 @@ main{
 ul{
     text-decoration: none;
     list-style-type: none;
+}
+
+a{
+    color: #F5F6FA;
+    text-decoration: none;
+}
+
+
+.hamburger-menu{
+    display: none;
 }
 
 .landing-navigation{
@@ -33,6 +43,7 @@ ul{
 .logo-landing{
     font-size: 25px;
     font-weight: bold;
+    color: #F5F6FA;
 }
 
 .landing-links ul{
@@ -82,6 +93,7 @@ FontAwesomeIcon{
     font-weight: bold;
     text-align: center;
     margin-top: 5px;
+    color: #F5F6FA;
 }
 
 .categories-title{
@@ -139,4 +151,182 @@ LandingTiles{
     position: relative;
     bottom: 0;
     margin-top: 10px;
+}
+
+
+
+
+/*                                 MEDIA QUERIES                         */
+
+/*                                LARGE DEVICES                        */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .landing-navigation{
+        margin: 0 10px;
+    }
+
+    .categories-tiles{
+        margin-left: 40px;
+    }
+}
+
+
+/*                               MEDIUM DEVICES                  */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .landing-navigation{
+        margin: 0;
+        padding-right: 0;
+    }
+
+    .categories-tiles{
+        margin-left: 20px;
+    }
+
+    .category-label{
+        width: 100%;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+}
+
+
+/*                              SMALL DEVICES                       */
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    body{
+        height: 100%;
+    }
+
+    .landing-navigation{
+        margin: 0;
+        padding-right: 0;
+    }
+
+    .logo-landing{
+        text-align: left;
+        justify-content: left;
+    }
+
+
+    .categories-tiles{
+        margin-top: 60px;
+        flex-direction: column;
+    }
+
+    .individual-tiles{
+        flex-direction: column;
+    }
+
+    .individual-tiles div{
+        margin-right: 0;
+    }
+
+    .category-label{
+        width: 100%;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .landing-para{
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+}
+
+
+/*        EXTRA-SMALL DEVICES         */
+@media only screen and (max-width: 599px){
+    body{
+        height: 100%;
+    }
+    .landing-navigation{
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+    .landing-links{
+        display: none;
+    }
+
+    .logo-landing{
+        margin-left: 10px;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+
+    .bm-burger-button {
+        position: fixed;
+        width: 25px;
+        height: 20px;
+        left: 10px;
+        top: 30px;
+        z-index: 0;
+    }
+
+    .bm-burger-bars {
+        background: #F5F6FA;
+    }
+
+    .bm-cross{
+        background: #F5F6FA;
+    }
+
+    .bm-cross-button {
+        height: 24px;
+        width: 24px;
+    }
+
+    .bm-menu-wrap {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .bm-menu{
+        background: #273C75;
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .bm-item-list{
+        padding-top: 50px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 50%;
+    }
+
+    .landing-para{
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .categories-tiles{
+        margin-top: 60px;
+        flex-direction: column;
+    }
+
+    .individual-tiles{
+        flex-direction: column;
+    }
+
+    .individual-tiles div{
+        margin-right: 0;
+    }
+
+    .category-label{
+        width: 100%;
+        font-size: 14px;
+        margin-right: 10px;
+    }
 }

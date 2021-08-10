@@ -2,6 +2,7 @@ import '../css/Landing.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import LandingTiles from './LandingTiles'
+import { slide as Menu } from 'react-burger-menu'
 import movieCategory from '../images/moviesCategory.jpg'
 import musicCategory from '../images/musicCategory.jpg'
 import scienceCategory from '../images/scienceCategory.jpg'
@@ -11,16 +12,24 @@ function Landing() {
     return (
         <div>
             <nav className="landing-navigation">
+                <div className="hamburger-menu">
+                    <Menu>
+                        <a href={'./Categories'}>Categories</a>
+                        <a href={'./Levels'}>Levels</a>
+                        <a href={'./Leaderboards'}>Leaderboards</a>
+                        <a href={'./Profile'}>Profile</a>
+                    </Menu>
+                </div>
                 <div className="logo-landing">
                     Quivia
                 </div>
 
                 <div className="landing-links">
                     <ul>
-                        <li>Categories</li>
-                        <li>Levels</li>
-                        <li>Leaderboards</li>
-                        <li>Profile</li>
+                        <li><a href={'./Categories'}>Categories</a></li>
+                        <li><a href={'./Levels'}>Levels</a></li>
+                        <li><a href={'./Leaderboards'}>Leaderboards</a></li>
+                        <li><a href={'./Profile'}>Profile</a></li>
                     </ul>
                 </div>
             </nav>
@@ -52,6 +61,7 @@ function Landing() {
                 <div className="copyright-landing">
                         &copy; Quivia 2021
                 </div>
+
                 
             </main>
 
