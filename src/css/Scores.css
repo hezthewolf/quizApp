@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(#273C75, #220A20) no-repeat;
+  color: #4f5363;
+
+}
+
+main{
+    height: 100%;
+}
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a{
+    color: #F5F6FA;
+    text-decoration: none;
+}
+
+
+.hamburger-menu-scores{
+    display: none;
+}
+
+.scores-navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 40px;
+    align-items: center;
+}
+
+.logo-scores{
+    font-size: 25px;
+    font-weight: bold;
+    color: #F5F6FA;
+}
+
+.score-links ul{
+    display: flex;
+    cursor: pointer;
+}
+
+.score-links ul li{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.scores-search{
+    margin: 20px 0;
+    margin-top: 0;
+}
+
+#searchScores{
+    height: 35px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    background: rgba(34, 10, 32, 0.45);
+    color: #F5F6FA;
+}
+
+#searchScores:focus{
+    outline: none;
+}
+
+.search-btn{
+    height: 35px;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    background: rgba(34, 10, 32, 0.45);
+    color: #F5F6FA;
+    width: 30px;
+    cursor: pointer;
+}
+
+FontAwesomeIcon{
+    margin-right: 10px;
+}
+
+.scores-description{
+    color: #F5F6FA;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.scores-category, .scores-level{
+    padding-left: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+.scores-card{
+  width: 80%;
+  height: 400px;
+  background: #192A56;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+}
+
+.scores-section{
+    color: #F5F6FA;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+}
+
+
+
+
+.scores-submit{
+    position: absolute;
+    bottom: 50px;
+    margin-right: 50px;
+    right: 0;
+}
+
+.scores-submit input{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #F5F6FA;
+    background: #220A20;
+}
+
+.scores-submit input:hover{
+    cursor: pointer;
+}
+
+.scores-copyright{
+    color: #F5F6FA;
+    position: relative;
+    bottom: 0;
+}
+
+
+
+/*         MEDIA QUERIES            */
+
+/*              SMALL DEVICES               */
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    .scores-category, .scores-level{
+        padding-left: 30px;
+    }
+    #question-answers button{
+        width: 300px;
+    }
+}
+
+
+/*     EXTRA-SMALL DEVICES     */
+@media only screen and (max-width: 599px){
+    body{
+        width: 100%;
+        height: 100%;
+    }
+
+    .scores-navigation{
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+    div.score-links{ 
+        display: none !important;
+    }
+
+
+    .logo-scores{
+        margin-left: 10px;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+
+    .bm-burger-button {
+        position: fixed;
+        width: 25px;
+        height: 20px;
+        left: 10px;
+        top: 30px;
+        z-index: 0;
+    }
+
+    .bm-burger-bars {
+        background: #F5F6FA;
+    }
+
+    .bm-cross{
+        background: #F5F6FA;
+    }
+
+    .bm-cross-button {
+        height: 24px;
+        width: 24px;
+    }
+
+    .bm-menu-wrap {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .bm-menu{
+        background: #273C75;
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .bm-item-list{
+        padding-top: 50px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 50%;
+    }
+
+    .scores-category, .scores-level{
+        padding-left: 20px;
+    }
+
+    .scores-section{
+        margin-left: 5px;
+    }
+
+
+    .scores-copyright{
+        margin-top: 50px;
+    }
+}
