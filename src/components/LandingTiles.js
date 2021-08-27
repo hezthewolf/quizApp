@@ -5,7 +5,7 @@ function LandingTiles(props) {
         <div>
             <div className="whole-tiles">
                 <div className="category-image">
-                    <img src={props.imaging} />
+                    <img src={props.imaging} alt={ "Category"}/>
                 </div>
                 <div className="category-label">
                     {props.tileText}
