@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#273C75, #220A20) no-repeat;
+    color: #F5F6FA;
+    height: 100%;
+}
+
+main{
+    height: 100%;
+}
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a{
+    color: #F5F6FA;
+    text-decoration: none;
+}
+
+
+.hamburger-menu{
+    display: none;
+}
+
+.profile-navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 40px;
+    align-items: center;
+}
+
+.logo-profile{
+    font-size: 25px;
+    font-weight: bold;
+    color: #F5F6FA;
+}
+
+.profile-links ul{
+    display: flex;
+    cursor: pointer;
+}
+
+.profile-links ul li{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.profile-title{
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+.profile-title p{
+    margin-left: 5px;
+}
+
+.profile-card1, .profile-card2{
+  width: 80%;
+  height: 250px;
+  background: #192A56;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+
+.card1-section, .card2-section{
+    color: #F5F6FA;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.account-title {
+    width: 100px;
+    text-align: center;
+    background: #220A20;
+    color: #F5F6FA;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.account-details span{
+    padding-right: 10px;
+    background: none;
+    width: 200px;
+}
+
+.account-details{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.account-details div{
+    display: flex;
+}
+
+.account-details div p{
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    background: #F5F6FA;
+    color: #220A20;
+    padding-left: 20px;
+}
+
+.password-logout{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.profile-logout{
+    display: flex;
+    justify-self: flex-end;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+}
+
+.profile-logout button{
+    background: #220A20;
+}
+
+.change-password{
+    width: 200px;
+    text-align: center;
+    background: #220A20;
+    color: #F5F6FA;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.trivia-title{
+    width: 100px;
+    text-align: center;
+    background: #220A20;
+    color: #F5F6FA;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.user-details div{
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.user-details span{
+    padding-right: 10px;
+    background: none;
+    width: 200px;
+}
+
+.user-details div p{
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    background: #F5F6FA;
+    color: #220A20;
+    padding-left: 20px;
+}

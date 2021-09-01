@@ -6,6 +6,7 @@ import Landing from './components/Landing';
 import Questions from './components/Questions';
 import Scores from './components/Scores';
 import Leaderboards from './components/Leaderboards';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route exact path='/Questions' component={Questions} />
             <Route exact path='/Scores' component={Scores} />
             <Route exact path='/Leaderboards' component={Leaderboards} />
+            <Route exact path='/Profile' component={Profile} />
           </Switch>
         </div>
     </BrowserRouter>
