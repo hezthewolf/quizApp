@@ -59,15 +59,7 @@ function Profile() {
                         <div className="password-logout">
                             <div className="change-password"><a href={"./Changepassword"}>Change password</a></div>
                             <div className="profile-logout">
-                                {showLogoutButton ?
-                                    <GoogleLogout
-                                        clientId={clientId}
-                                        buttonText="Logout"
-                                        onLogoutSuccess={onSignOutSuccess}
-                                    >
-                                    </GoogleLogout> : null
-                            
-                                }
+                                <p>Logout</p>
                             </div>
                         </div>
 
@@ -84,6 +76,7 @@ function Profile() {
                             <div className="user-points"><span>Points: </span><p>1980</p></div>
                             <div className="user-categories"><span>Categories: </span><p>History, Music, Art, Gaming</p></div>
                             <div className="user-points"><span>Best position: </span><p>46</p></div>
+
                         </div>
 
                     </div>

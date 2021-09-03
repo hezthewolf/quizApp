@@ -145,8 +145,19 @@ a{
     padding: 20px;
 }
 
-.profile-logout button{
+.profile-logout p{
+    width: 200px;
+    text-align: center;
     background: #220A20;
+    color: #F5F6FA;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 .change-password{

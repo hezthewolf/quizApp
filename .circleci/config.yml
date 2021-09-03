@@ -4,6 +4,7 @@ version: 2.1
 orbs:
   # Declare a dependency on the welcome-orb
   welcome: circleci/welcome-orb@0.4.1
+  heroku: circleci/heroku@0.0.10
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
@@ -11,3 +12,6 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+  heroku_deploy:
+    jobs:
+      - heroku/deploy-via-git
