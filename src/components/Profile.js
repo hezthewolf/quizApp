@@ -1,25 +1,15 @@
 import '../css/Profile.css'
-import React, { useState } from 'react';
-import { GoogleLogout } from 'react-google-login'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { slide as ProfileMenu } from 'react-burger-menu'
 
 function Profile() {
-    const clientId = "855001071690-jdg0kmggi5uikmbt2tbqs5clih92tfoe.apps.googleusercontent.com";
-    const [showLogoutButton, setShowLogoutButton] = useState(true);
-
-
-    const onSignOutSuccess = () => {
-            alert("Signout successful")
-            setShowLogoutButton(false);
-    }
     return (
         <div>
              <nav className="profile-navigation">
                 <div className="hamburger-menu">
                     <ProfileMenu>
-                        <a href={'./Categories'}>Categories</a>
+                        <a href={'./Landing'}>Home</a>
                         <a href={'./Levels'}>Levels</a>
                         <a href={'./Leaderboards'}>Leaderboards</a>
                         <a href={'./Profile'}>Profile</a>
