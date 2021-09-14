@@ -128,13 +128,15 @@ a{
     border-radius: 10px;
     background: #F5F6FA;
     color: #220A20;
-    padding-left: 20px;
+    overflow: hidden;
+    padding: 5px;
 }
 
 .password-logout{
     display: flex;
     width: 100%;
     position: relative;
+    align-items: center;
 }
 
 .profile-logout{
@@ -161,6 +163,11 @@ a{
 }
 
 .change-password{
+    display: flex;
+    padding: 20px;
+}
+
+.change-password p{
     width: 200px;
     text-align: center;
     background: #220A20;
@@ -171,7 +178,7 @@ a{
     align-items: center;
     border: none;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
@@ -206,5 +213,120 @@ a{
     border-radius: 10px;
     background: #F5F6FA;
     color: #220A20;
-    padding-left: 20px;
+    padding: 5px;
+}
+
+
+
+
+/*                                    MEDIA QUERIES                    */
+
+
+/*                                   SMALL DEVICES                     */
+
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    .profile-card1, .profile-card2{
+        width: 90%;
+    }
+    .card1-section, .card2-section{
+        margin-left: 20px;
+        padding: 10px;
+    }
+
+    .account-details span, .user-details span{
+        width: 150px;
+    }
+}
+
+
+
+
+/*                                   EXTRA-SMALL DEVICES                          */
+@media only screen and (max-width: 599px){
+    .profile-links{
+        display: none;
+    }
+
+    .profile-navigation{
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+
+    .logo-profile{
+        margin-left: 10px;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+
+    .bm-burger-button {
+        position: fixed;
+        width: 25px;
+        height: 20px;
+        left: 10px;
+        top: 30px;
+        z-index: 0;
+    }
+
+    .bm-burger-bars {
+        background: #F5F6FA;
+    }
+
+    .bm-cross{
+        background: #F5F6FA;
+    }
+
+    .bm-cross-button {
+        height: 24px;
+        width: 24px;
+    }
+
+    .bm-menu-wrap {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .bm-menu{
+        background: #273C75;
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .bm-item-list{
+        padding-top: 50px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: 50%;
+    }
+
+
+    .profile-card1, .profile-card2{
+        width: 95%;
+        height: fit-content;
+    }
+    .card1-section, .card2-section{
+        margin-left: 20px;
+        padding: 10px;
+    }
+
+    .account-details span, .user-details span{
+        width: 150px;
+    }
+
+    .account-details div p, .user-details div p{
+        width: 200px;
+    }
+
+    .profile-logout p, .change-password p{
+        width: 150px;
+        height: auto;
+        padding: 5px;
+    }
+
 }

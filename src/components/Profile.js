@@ -47,11 +47,12 @@ function Profile() {
                         </div>
 
                         <div className="password-logout">
-                            <div className="change-password"><a href={"./Changepassword"}>Change password</a></div>
+                            <div className="change-password"><a href={"./Changepassword"}><p>Change password</p></a></div>
                             <div className="profile-logout">
                                 <p>Logout</p>
                             </div>
                         </div>
+
 
                     </div>
                     </div>
