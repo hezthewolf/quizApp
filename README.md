@@ -1,3 +1,5 @@
 # QuizApp
 
-This is a simple quiz app. I'll update more as the project grows.
+Built with React, Node.js, Express.js and MongoDB
+
+Link: https://quivia-trivia.herokuapp.com
