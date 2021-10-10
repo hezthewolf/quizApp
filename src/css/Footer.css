@@ -1,0 +1,10 @@
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    background-color: #220A20;
+}
+
+.footer-socials{
+    color: #FFFFFF;
+}

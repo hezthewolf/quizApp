@@ -10,7 +10,7 @@ body{
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(#273C75, #220A20) no-repeat;
   color: #4f5363;
-  height: 100vh;
+  height: 100%;
 }
 
 main{

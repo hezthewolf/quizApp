@@ -2,6 +2,7 @@ import '../css/Profile.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { slide as ProfileMenu } from 'react-burger-menu'
+import Footer from './Footer'
 
 function Profile() {
     return (
@@ -73,6 +74,8 @@ function Profile() {
                     </div>
                 </div>
             </main>
+
+            <Footer />
         </div>
     )
 }

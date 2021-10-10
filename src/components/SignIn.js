@@ -1,30 +1,33 @@
 import React, { useState } from 'react';
-import { GoogleLogin, GoogleLogout } from 'react-google-login'
+// import { GoogleLogin, GoogleLogout } from 'react-google-login'
 import '../css/SignIn.css'
 import Separator from '../images/Separator.png'
+import LoginButton from './LoginButton';
 
 
 
 
 function SignIn(){
 
-    const clientId = "855001071690-jdg0kmggi5uikmbt2tbqs5clih92tfoe.apps.googleusercontent.com";
-    const [showLoginButton, setShowLoginButton] = useState(true);
-    const [showLogoutButton, setShowLogoutButton] = useState(false);
 
-    const onLoginSuccess = (res) => {
-            console.log("Login success", res.profileObj);
-    }
 
-    const onLoginFailure = (res) => {
-            console.log("Login failed", res);
-    }
+    // const clientId = "855001071690-jdg0kmggi5uikmbt2tbqs5clih92tfoe.apps.googleusercontent.com";
+    // const [showLoginButton, setShowLoginButton] = useState(true);
+    // const [showLogoutButton, setShowLogoutButton] = useState(false);
 
-    const onSignOutSuccess = () => {
-            alert("Signout successful")
-            setShowLoginButton(true);
-            setShowLogoutButton(false);
-    }
+    // const onLoginSuccess = (res) => {
+    //         console.log("Login success", res.profileObj);
+    // }
+
+    // const onLoginFailure = (res) => {
+    //         console.log("Login failed", res);
+    // }
+
+    // const onSignOutSuccess = () => {
+    //         alert("Signout successful")
+    //         setShowLoginButton(true);
+    //         setShowLogoutButton(false);
+    // }
     return(
         <div>
                 <div className="nav-signin">
@@ -72,7 +75,7 @@ function SignIn(){
 
                                 <div className="next">
                                     <a href={"./Landing"}>
-                                        <input type="submit" value="Log in" />
+                                        <LoginButton />
                                     </a>
                                 </div>
 
@@ -91,7 +94,7 @@ function SignIn(){
                             </div>
 
                             <div className="google-sign">
-                                {showLoginButton ?
+                                {/* {showLoginButton ?
                                     <GoogleLogin
                                         clientId={clientId}
                                         buttonText="Sign in with google"
@@ -110,7 +113,9 @@ function SignIn(){
                                     >
                                     </GoogleLogout> : null
                                 
-                                }
+                                } */}
+
+                            
 
                             </div>
                         </div>
