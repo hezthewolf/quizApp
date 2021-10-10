@@ -10,14 +10,14 @@ const domain = process.env.REACT_APP__AUTH0_DOMAIN
 const clientId = process.env.REACT_APP__AUTH0_CLIENT_ID
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Auth0Provider
       domain={domain}
       clientId={clientId}
       redirectUri= {window.location.origin}>
-      <App />
-    </Auth0Provider>
-  </React.StrictMode>,
+        <App />
+    </Auth0Provider>,
+  // {/* </React.StrictMode>, */}
   document.getElementById('root')
 );
 
