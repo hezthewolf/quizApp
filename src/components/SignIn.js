@@ -74,9 +74,8 @@ function SignIn(){
                                 </div>
 
                                 <div className="next">
-                                    <a href={"./Landing"}>
+                                
                                         <LoginButton />
-                                    </a>
                                 </div>
 
                             <div className="forgot">
