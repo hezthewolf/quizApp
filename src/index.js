@@ -15,7 +15,7 @@ ReactDOM.render(
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri= {window.location.href = "https://www.quivia-trivia.herokuapp.com/Landing"}>
+      redirectUri= {window.location.origin}>
         <App />
     </Auth0Provider>,
   // {/* </React.StrictMode>, */}
