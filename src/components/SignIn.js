@@ -1,35 +1,29 @@
-import React, { useState } from 'react';
-// import { GoogleLogin, GoogleLogout } from 'react-google-login'
+import React from 'react';
 import '../css/SignIn.css'
 import Separator from '../images/Separator.png'
-import LoginButton from './LoginButton';
 
 
 
 
-function SignIn(){
+class SignIn extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            username: "",
+            password: "",
+            remember: false
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
 
+    handleChange(event) {
+        const {name, value, type, checked} = event.target
+        type === "checkbox" ? this.setState({[name]: checked}) : this.setState({[name]: value})
+    }
 
-
-    // const clientId = "855001071690-jdg0kmggi5uikmbt2tbqs5clih92tfoe.apps.googleusercontent.com";
-    // const [showLoginButton, setShowLoginButton] = useState(true);
-    // const [showLogoutButton, setShowLogoutButton] = useState(false);
-
-    // const onLoginSuccess = (res) => {
-    //         console.log("Login success", res.profileObj);
-    // }
-
-    // const onLoginFailure = (res) => {
-    //         console.log("Login failed", res);
-    // }
-
-    // const onSignOutSuccess = () => {
-    //         alert("Signout successful")
-    //         setShowLoginButton(true);
-    //         setShowLogoutButton(false);
-    // }
-    return(
-        <div>
+    render() {
+        return (
+            <div>
                 <div className="nav-signin">
                     <div className="logo">
                         Quivia
@@ -56,7 +50,7 @@ function SignIn(){
                                     <label for="username">
                                         Username
                                     </label>
-                                    <input id="username"  type="text" required="required" />
+                                    <input id="username" name="username" type="text" value={this.state.username} required="required" onChange={this.handleChange} />
                                 </div>
 
 
@@ -64,25 +58,25 @@ function SignIn(){
                                     <label for="password">
                                         Password
                                     </label>
-                                    <input id="password" type="password" required="required" />
+                                    <input id="password" name="password" type="password" value={this.state.password} required="required" onChange={ this.handleChange }/>
                                 </div>
 
                             
                                 <div className="remember">
-                                    <input type="checkbox" id="remember" />
+                                    <input type="checkbox" name="remember" id="remember" checked={this.state.remember} onChange={this.handleChange} />
                                     <label htmlFor="remember">Remember me</label>
                                 </div>
 
                                 <div className="next">
                                 
-                                        <LoginButton />
+                                    <p>Log in</p>
                                 </div>
 
-                            <div className="forgot">
-                                <a href={"./Forgot"}>
-                                    Forgot password
-                                </a>
-                            </div>
+                                <div className="forgot">
+                                    <a href={"./Forgot"}>
+                                        Forgot password
+                                    </a>
+                                </div>
 
 
                             </form>
@@ -92,31 +86,7 @@ function SignIn(){
                                 <img id="separator" src={Separator} alt="Separator" />
                             </div>
 
-                            <div className="google-sign">
-                                {/* {showLoginButton ?
-                                    <GoogleLogin
-                                        clientId={clientId}
-                                        buttonText="Sign in with google"
-                                        onSuccess={onLoginSuccess}
-                                        onFailure={onLoginFailure}
-                                        cookiePolicy={'single_host_origin'}
-                                    /> : null
-                                    
-                                }
-
-                                {showLogoutButton ?
-                                    <GoogleLogout
-                                        clientId={clientId}
-                                        buttonText="Logout"
-                                        onLogoutSuccess={onSignOutSuccess}
-                                    >
-                                    </GoogleLogout> : null
-                                
-                                } */}
-
-                            
-
-                            </div>
+                            <div className="google-sign"></div>
                         </div>
 
                     </div>
@@ -126,7 +96,8 @@ function SignIn(){
                     </div>
                 </main>
             </div>
-    )
+        )
+    }
 }
 
 

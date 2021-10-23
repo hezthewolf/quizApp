@@ -1,28 +1,31 @@
-import React, { useState } from 'react';
-import { GoogleLogin, GoogleLogout } from 'react-google-login'
+import React from 'react';
 import '../css/SignUp.css'
 import Separator from '../images/Separator.png'
 
 
-function SignUp() {
-
-        const clientId = "855001071690-jdg0kmggi5uikmbt2tbqs5clih92tfoe.apps.googleusercontent.com";
-        const [showLoginButton, setShowLoginButton] = useState(true);
-        const [showLogoutButton, setShowLogoutButton] = useState(false);
-
-        const onLoginSuccess = (res) => {
-            console.log("Login success", res.profileObj);
+class SignUp extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            name: "",
+            username: "",
+            email: "",
+            password: "",
+            confirm: ""
         }
+        this.handleChange = this.handleChange.bind(this)
+    }
 
-        const onLoginFailure = (res) => {
-            console.log("Login failed", res);
-        }
+    handleChange(event) {
+        const {name, value} = event.target
+        this.setState({
+            [name]: value
+        })
+    }
 
-        const onSignOutSuccess = () => {
-            alert("Signout successful")
-            setShowLoginButton(true);
-            setShowLogoutButton(false);
-        }
+
+    render() {
+
         return (
             <div>
                 <div className="nav-sign">
@@ -46,35 +49,35 @@ function SignUp() {
                                 <label for="name">
                                     Name
                                 </label>
-                                <input id="name" placeholder="John Doe" type="text" required="required" />
+                                <input id="name" name="name" value={this.state.name} placeholder="John Doe" type="text" required="required" onChange={this.handleChange} />
                             </div>
 
                             <div className="username">
                                 <label for="username">
                                     Choose your username
                                 </label>
-                                <input id="username" placeholder="username" type="text" required="required" />
+                                <input id="username" name="username" value={this.state.username} placeholder="username" type="text" required="required" onChange={this.handleChange} />
                             </div>
 
                             <div className="email">
                                 <label for="email">
                                     Email
                                 </label>
-                                <input id="email" placeholder="johndoe@gmail.com" type="text" required="required" />
+                                <input id="email" name="email" value={this.state.email} placeholder="johndoe@gmail.com" type="text" required="required" onChange={this.handleChange} />
                             </div>
 
                             <div className="password-sign">
                                 <label for="password">
                                     Password
                                 </label>
-                                <input id="password" type="password" required="required" />
+                                <input id="password" name="password" value={this.state.password} type="password" required="required" onChange={this.handleChange} />
                             </div>
 
                             <div className="confirm">
                                 <label for="confirm">
                                     Confirm password
                                 </label>
-                                <input id="confirm" type="password" required="required" />
+                                <input id="confirm" name="confirm" value={this.state.confirm} type="password" required="required" onChange={this.handleChange} />
                             </div>
                         </form>
                         
@@ -89,30 +92,7 @@ function SignUp() {
                         </div>
 
 
-                        <div className="google">
-                            {showLoginButton ?
-                                <GoogleLogin
-                                    id="google-button"
-                                    clientId={clientId}
-                                    buttonText="Sign in with google"
-                                    onSuccess={onLoginSuccess}
-                                    onFailure={onLoginFailure}
-                                    cookiePolicy={'single_host_origin'}
-                                /> : null
-                                
-                            }
-
-                            {showLogoutButton ?
-                                <GoogleLogout
-                                    clientId={clientId}
-                                    buttonText="Logout"
-                                    onLogoutSuccess={onSignOutSuccess}
-                                >
-                                </GoogleLogout> : null
-                            
-                            }
-
-                        </div>
+                        <div className="google"></div>
 
                     </div>
 
@@ -123,6 +103,7 @@ function SignUp() {
             </div>
         )
     }
+}
 
 
 export default SignUp;
