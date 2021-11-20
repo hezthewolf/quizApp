@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 9000
 const bodyParser = require('body-parser')
+const userRoutes = require('./routes/users')
 let server;
 
 require("dotenv").config();
@@ -22,7 +23,9 @@ mongoose.connect(process.env.DB_URI, {
 }).catch(err => {
     console.log("Error connecting to the mongoDB instance", err)
 });
+
 app.use(express.json());
+app.use('/api/users', userRoutes)
 
 server = app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}...`);
