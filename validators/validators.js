@@ -1,15 +1,16 @@
 const isEmpty = require("is-empty");
 const validator = require("validator");
 
-module.exports.loginValidator = (data) => {
-    const errors = {};
-      data.email = !isEmpty(data.email) ? data.email : "";
-      data.password = !isEmpty(data.password) ? data.password : "";
+const loginValidator = (data) => {
+  data.email = !isEmpty(data.email) ? data.email : "";
+  data.password = !isEmpty(data.password) ? data.password : "";
+
+  const errors = {};
   let emailError = validator.isEmpty(data.email)
     ? "Email is required"
     : !validator.isEmail(data.email)
     ? "Please provide a valid email"
-    : " ";
+    : "";
   let passwordError = validator.isEmpty(data.password)
     ? "Password is required"
     : "";
@@ -28,14 +29,14 @@ module.exports.loginValidator = (data) => {
   };
 };
 
-module.exports.registerValidator = (data) => {
-  data.email = !(isEmpty(data.email)) ? data.email : "";
-  data.password = !(isEmpty(data.password)) ? data.password : "";
-  data.confirmPassword = !(isEmpty(data.confirmPassword))
+const registerValidator = (data) => {
+  data.email = !isEmpty(data.email) ? data.email : "";
+  data.password = !isEmpty(data.password) ? data.password : "";
+  data.confirmPassword = !isEmpty(data.confirmPassword)
     ? data.confirmPassword
     : "";
-  data.name = !(isEmpty(data.name)) ? data.name : "";
-  data.username = !(isEmpty(data.username)) ? data.username : "";
+  data.name = !isEmpty(data.name) ? data.name : "";
+  data.username = !isEmpty(data.username) ? data.username : "";
 
   const errors = {};
   let emailError = validator.isEmpty(data.email)
@@ -53,7 +54,7 @@ module.exports.registerValidator = (data) => {
     ? "Passwords do not match"
     : "";
 
-  let nameError = validator.isEmpty(data.name) ? "Nameis required" : "";
+  let nameError = validator.isEmpty(data.name) ? "Name is required" : "";
 
   let usernameError = validator.isEmpty(data.username)
     ? "Username is required"
@@ -84,3 +85,5 @@ module.exports.registerValidator = (data) => {
     isValid: isEmpty(errors),
   };
 };
+
+module.exports = { loginValidator, registerValidator };
