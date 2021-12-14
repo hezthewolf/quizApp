@@ -82,9 +82,6 @@ function Leaderboards() {
                 </div>
 
 
-                <div className="leaderboards-copyright">
-                    &copy; Quivia 2021
-                </div>
             </main>
         </div>
     )

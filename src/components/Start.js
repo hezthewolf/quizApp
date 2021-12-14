@@ -37,9 +37,6 @@ class Start extends Component{
           </div>
 
 
-          <div className="copyright-start">
-            &copy; Quivia 2021
-          </div>
         </main>
       </div>
     )

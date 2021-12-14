@@ -20,6 +20,7 @@ label{
 .nav-signin{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     color: #F5F6FA;
     padding: 20px;
     margin: 0 30px;
@@ -120,7 +121,7 @@ input[type=text], input[type=password]{
     text-align: center;
 }
 
-.next input{
+.next button{
     width: 180px;
     height: 40px;
     border: none;
@@ -130,6 +131,7 @@ input[type=text], input[type=password]{
     background: #273C75;
     margin-top: 20px;
     text-align: center;
+    cursor: pointer;
 }
 
 .forgot{

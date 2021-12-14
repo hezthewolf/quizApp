@@ -58,9 +58,6 @@ function Landing() {
                     </div>
                 </div>
 
-                <div className="copyright-landing">
-                        &copy; Quivia 2021
-                </div>
 
                 
             </main>

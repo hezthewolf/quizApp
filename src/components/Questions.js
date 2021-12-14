@@ -74,10 +74,6 @@ function Questions() {
                     </div>
                 </div>
 
-
-                <div className="questions-copyright">
-                    &copy; Quivia 2021
-                </div>
             </main>
         </div>
     )

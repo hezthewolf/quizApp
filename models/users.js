@@ -23,18 +23,6 @@ const UserSchema = new Schema({
         type: Date,
         default: new Date()
     },
-    avatar: {
-        type: Object,
-        required: false,
-        contains: {
-            url: {
-                type: String
-            },
-            publicId: {
-                type: String
-            }
-        }
-    },
     deleted: {
         type: Boolean,
         default: false

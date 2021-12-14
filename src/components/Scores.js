@@ -75,9 +75,6 @@ function Scores() {
                 </div>
 
 
-                <div className="scores-copyright">
-                    &copy; Quivia 2021
-                </div>
             </main>
         </div>
     )
