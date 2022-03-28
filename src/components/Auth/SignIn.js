@@ -12,10 +12,12 @@ class SignIn extends React.Component{
         remember: false
     }
     this.handleChange = this.handleChange.bind(this);
+    this.signIn = this.signIn.bind(this);
   }
 
 
   handleChange(event) {
+    event.preventDefault()
       const { name, value } = event.target;
       this.setState({
         [name]: value
@@ -23,7 +25,7 @@ class SignIn extends React.Component{
   }
 
   signIn = (username, password, remember) => {
-    axios.post('/api/users/signin', (username, password, remember)).then(res => {
+    axios.post('/api/users/login', (username, password, remember)).then(res => {
       console.log(res)
     }).catch(err => {
         console.log(err)
@@ -90,7 +92,7 @@ class SignIn extends React.Component{
                 <div className="next">
                   <button
                     onClick={() => {
-                      this.signIn(
+                      this.props.signIn(
                         this.state.username,
                         this.state.password,
                         this.state.remember

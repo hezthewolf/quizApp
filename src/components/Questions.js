@@ -1,12 +1,26 @@
+import { useState } from 'react';
 import '../css/Questions.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { slide as QuestionsMenu } from 'react-burger-menu'
 
 function Questions() {
+
+    const [answer, setAnswer] = useState(0);
+    const [myAnswer, setMyAnswer] = useState(0);
+    const [checkedValue, setCheckedValue] = useState(0);
+    const [score, setScore] = useState(0);
+
+
+    const handleRadioChange = () => {
+        setMyAnswer(checkedValue);
+        if (myAnswer === answer) {
+            setScore(score + 1);
+        }
+    }
     return (
         <div>
-             <nav className="questions-navigation">
+            <nav className="questions-navigation">
                 <div className="hamburger-menu">
                     <QuestionsMenu>
                         <a href={'./Categories'}>Categories</a>
@@ -58,12 +72,46 @@ function Questions() {
                         </div>
 
                         <div id="question-answers">
-                            <button id="answer-1"><p>A. Administrative centers</p></button>
-                            <button id="answer-2"><p>B. Tombs</p></button>
-                            <button id="answer-3"><p>C. Command posts</p></button>
-                            <button id="answer-4"><p>D. Shrines</p></button>
+
+                            <div className='answer1-container'>
+                                <input
+                                    id="1"
+                                    type="radio"
+                                    value="1"
+                                    onChange={handleRadioChange}
+                                />
+                                <label>Administrative centers</label>
+                            </div>
+                            <div className='answer2-container'>
+                                <input
+                                    id="2"
+                                    type="radio"
+                                    value="2"
+                                    onChange={handleRadioChange}
+                                />
+                                <label>Tombs</label>
+                            </div>
+                            <div className='answer3-container'>
+                                <input
+                                    id="3"
+                                    type="radio"
+                                    value="3"
+                                    onChange={handleRadioChange}
+                                />
+                                <label>Command posts</label>
+                            </div>
+                            <div className='answer4-container'>
+                                <input
+                                    id="4"
+                                    type="radio"
+                                    value="4"
+                                    onChange={handleRadioChange}
+                                />
+                                <label>Shrines</label>
+                            </div>
 
                         </div>
+
 
                         <div className="questions-submit">
                             <a href={'#'}>
@@ -74,8 +122,8 @@ function Questions() {
                     </div>
                 </div>
 
-            </main>
-        </div>
+            </main >
+        </div >
     )
 }
 

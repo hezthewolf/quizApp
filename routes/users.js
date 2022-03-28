@@ -18,9 +18,9 @@ router.post("/login", (req, res) => {
   if (!isValid) {
     res.json({ success: false, errors });
   } else {
-    Users.findOne({ email: req.body.email }).then(user => {
+    Users.findOne({ username: req.body.username }).then(user => {
       if (!user) {
-        res.json({ message: "Email does not exist", success: false });
+        res.json({ message: "Username does not exist", success: false });
       } else {
         bcrypt.compare(req.body.password, user.password).then(success => {
           if (!success) {
@@ -101,6 +101,12 @@ router.get('/:id', checkAuth, (req, res) => {
   }).catch(err => {
     res.json({success: false, message: err.message})
   })
+})
+
+
+//                                                        GET ALL USERS
+router.get('/users', (req, res) => {
+  res.json({Users})
 })
 
 module.exports = router;

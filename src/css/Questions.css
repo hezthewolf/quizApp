@@ -130,25 +130,37 @@ FontAwesomeIcon{
     margin-top: 20px;
 }
 
-#question-answers button{
+#question-answers div{
     text-align: left;
     color: #F5F6FA;
     width: 500px;
     height: 40px;
-    background: #273C75;
     border: none;
     border-radius: 10px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
-#question-answers button:hover{
+#question-answers div > label{
+    padding-left: 5px;
+}
+
+#answer-1, 
+#answer-2, 
+#answer-3, 
+#answer-4{
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+#question-answers div:hover{
     cursor: pointer;
 }
 
-#question-answers button p{
-    padding-left: 20px;
-    font-size: 18px;
-}
+
 
 .questions-submit{
     text-align: center;
